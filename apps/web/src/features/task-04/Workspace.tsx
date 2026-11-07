@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
+import { clusterColor as color } from "../../lib/dataColors";
 import { Link, useSearchParams } from "react-router";
 import {
   Bar,
@@ -11,6 +12,7 @@ import {
   ResponsiveContainer,
   Scatter,
   ScatterChart,
+  Symbols,
   Tooltip,
   XAxis,
   YAxis,
@@ -23,18 +25,6 @@ import {
   useSegmentation,
 } from "../../lib/api";
 import type { SegmentationResults } from "../../lib/api";
-const colors = [
-  "#000000",
-  "#555555",
-  "#888888",
-  "#222222",
-  "#666666",
-  "#000000",
-  "#555555",
-  "#888888",
-  "#222222",
-  "#666666",
-];
 const shapes = [
   "circle",
   "square",
@@ -44,7 +34,6 @@ const shapes = [
   "star",
   "wye",
 ] as const;
-const color = (id: number) => colors[id % colors.length];
 function Stamp({ data }: { data: SegmentationResults }) {
   return <RunStamp run={data.run_id} />;
 }
@@ -60,7 +49,7 @@ function ClusterMap({
       <div
         className="cluster-map"
         role="img"
-        aria-label={`PCA visualization of ${data.projection.length} sampled titles, marked by cluster symbol and grayscale`}
+        aria-label={`PCA visualization of ${data.projection.length} sampled titles, marked by cluster color, symbol and labelled legend`}
       >
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 15, right: 20, bottom: 25, left: 0 }}>
@@ -108,8 +97,9 @@ function ClusterMap({
                     (point) => point.cluster === profile.id,
                   )}
                   fill={color(profile.id)}
-                  fillOpacity={1}
-                  shape={shapes[profile.id % shapes.length]}
+                  fillOpacity={0.8}
+                  stroke={color(profile.id)}
+                  shape={<Symbols type={shapes[profile.id % shapes.length]} />}
                   legendType={shapes[profile.id % shapes.length]}
                   isAnimationActive={false}
                 />
@@ -121,8 +111,10 @@ function ClusterMap({
       <p className="table-note">
         {data.projection.length.toLocaleString()} proportionally sampled titles.
         Two PCA components explain {percent(data.projection_variance)} of
-        feature variance. Distances and overlap in this view are approximations;
-        clustering uses all {data.feature_count} feature dimensions.
+        feature variance. Each cluster keeps the same color across the map, size
+        chart and filters; symbols and IDs provide additional cues. Distances
+        and overlap in this view are approximations; clustering uses all{" "}
+        {data.feature_count} feature dimensions.
       </p>
     </>
   );
@@ -321,7 +313,15 @@ export function ClusterExplorer() {
             ))}
           </div>
         </section>
-        <aside className="cluster-profile" data-motion-revision={cluster}>
+        <aside
+          className="cluster-profile"
+          data-motion-revision={cluster}
+          style={
+            {
+              "--cluster-color": profile ? color(profile.id) : undefined,
+            } as CSSProperties
+          }
+        >
           {profile ? (
             <>
               <p className="eyebrow">
@@ -583,6 +583,7 @@ export function SegmentationEvaluation() {
                   dataKey={name}
                   name={modelName(name)}
                   stroke={color(i)}
+                  strokeDasharray={[undefined, "7 4", "2 4"][i % 3]}
                   strokeWidth={2}
                   dot={{ r: 3 }}
                   isAnimationActive={false}

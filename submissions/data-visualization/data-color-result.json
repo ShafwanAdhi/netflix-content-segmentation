@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "task_id": 4,
+  "run_id": "20261106T115043590368Z",
+  "checks": [
+    "Active artifact is ready",
+    "Every cluster has a unique size-bar color",
+    "All cluster colors remain visible in the PCA map",
+    "Directory swatches are visible and match cluster size bars",
+    "Cluster plot actually renders all seven symbol shapes",
+    "Filtering retains the original cluster color, even for the last ID",
+    "Selected chip retains its visible color swatch",
+    "All algorithms have distinct colors and dash patterns",
+    "768px overview: chart and legends do not overflow the page",
+    "768px explore: chart and legends do not overflow the page",
+    "768px evaluation: chart and legends do not overflow the page",
+    "390px overview: chart and legends do not overflow the page",
+    "390px explore: chart and legends do not overflow the page",
+    "390px evaluation: chart and legends do not overflow the page",
+    "320px overview: chart and legends do not overflow the page",
+    "320px explore: chart and legends do not overflow the page",
+    "320px evaluation: chart and legends do not overflow the page",
+    "No uncaught browser errors"
+  ],
+  "errors": []
+}

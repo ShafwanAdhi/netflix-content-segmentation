@@ -64,3 +64,7 @@ Live: [https://netflix-content-segmentation.shafwan.digital](https://netflix-con
 Playwright against the public HTTPS origin: **51 checks passed**, no uncaught browser exceptions; all five sections, real task interactions, keyboard/reduced-motion behavior and 1440/768/390/320px layout checks. Controlled dataset-503 fixtures are browser-only. Other VPS applications remained running. No load, failover or certificate-renewal dry-run test is claimed.
 
 [Run/container/browser evidence](../submissions/deployment/production/verification.json) ? [Desktop capture](../submissions/deployment/production/desktop-overview.png) ? [Mobile capture](../submissions/deployment/production/390px-dataset.png).
+
+## Semantic data visualization audit - 2026-11-08
+
+The neutral RawBlock frame now permits semantic data colors. Every task page was reviewed; legends, values and point/line styles complement color. See the [color contract](architecture/data-visualization.md) and [current local evidence](../submissions/data-visualization/README.md). This task passed its build, 2 frontend tests, 51 full UI regression checks and 18 visualization checks. Saved model/checksum identities are unchanged. Earlier sections above describe historical releases.
