@@ -1,0 +1,43 @@
+{
+  "selected": {
+    "algorithm": "kmeans",
+    "k": 10,
+    "silhouette_mean": 0.24080575754813563,
+    "silhouette_std": 0.0034076856053579024,
+    "davies_bouldin": 1.73435304246009,
+    "calinski_harabasz": 160.0650065428291,
+    "stability_ari": 0.661990597885784,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 2.188,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.24469021358771118,
+        "davies_bouldin": 1.7054618752689776,
+        "calinski_harabasz": 161.66948329466834,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.23639336096428204,
+        "davies_bouldin": 1.8053961850456783,
+        "calinski_harabasz": 158.59822868023812,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.24133369809241367,
+        "davies_bouldin": 1.6922010670656138,
+        "calinski_harabasz": 159.9273076535809,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      }
+    ],
+    "diagnostics": []
+  },
+  "rule": "highest mean sampled silhouette among converged nondegenerate candidates; ties: lower Davies-Bouldin, lower k, K-Means before MiniBatch before Gaussian Mixture",
+  "selected_at": "2026-11-06T11:51:15.116865+00:00"
+}

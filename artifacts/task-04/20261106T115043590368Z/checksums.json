@@ -1,0 +1,10 @@
+{
+  "assignments.csv": "743a8d7c7799ed4914688980fe7d2e31abdaf51029326c0afc06a80fb818dede",
+  "comparison.csv": "5151d4900edce53405b28145f420700a37c1d4d1e1851dbb8745758eca15efee",
+  "metadata.json": "16fba3dc280f0dca1f49f930538356729f8422ef3d11f3b48a2baf240465b58c",
+  "pipeline.joblib": "04a159b22e87ec6b2c848ca7fca9185eb8a5f9c1c086af385cfa8f1ec639dfd0",
+  "progress.json": "f0433043bcf33f423a42a801c4fb337a2c2400dea3e6b296efba59f3048be552",
+  "projection.joblib": "6dd3eb9893238b6f3675c23f2eee3ac93fc78d9fd52fd619d4b8ecd65d6b7cbd",
+  "results.json": "eebc5a3d46a61d7bb9394ad552e6f61eb9e342139e869fde58fbf75d4e7894a3",
+  "selection.json": "568b02eadd5affe6264b9362495193ecb118335221bac71d92864cddce9c2aca"
+}

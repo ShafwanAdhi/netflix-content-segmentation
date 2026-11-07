@@ -1,0 +1,1055 @@
+[
+  {
+    "algorithm": "kmeans",
+    "k": 2,
+    "silhouette_mean": 0.1661941845082774,
+    "silhouette_std": 0.0,
+    "davies_bouldin": 2.266636250235589,
+    "calinski_harabasz": 248.76526471139266,
+    "stability_ari": 1.0,
+    "minimum_share": 0.30308550609131274,
+    "eligible": true,
+    "seconds": 1.218,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 3,
+    "silhouette_mean": 0.14928162849370402,
+    "silhouette_std": 0.0,
+    "davies_bouldin": 2.3584425235932662,
+    "calinski_harabasz": 219.65744044063237,
+    "stability_ari": 1.0,
+    "minimum_share": 0.30308550609131274,
+    "eligible": true,
+    "seconds": 1.672,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.14928162849370402,
+        "davies_bouldin": 2.3584425235932662,
+        "calinski_harabasz": 219.65744044063237,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 3
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.14928162849370402,
+        "davies_bouldin": 2.3584425235932662,
+        "calinski_harabasz": 219.65744044063237,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 3
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.14928162849370402,
+        "davies_bouldin": 2.3584425235932662,
+        "calinski_harabasz": 219.65744044063237,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 3
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 4,
+    "silhouette_mean": 0.17450910699987424,
+    "silhouette_std": 0.011825695458186422,
+    "davies_bouldin": 2.253738652679354,
+    "calinski_harabasz": 194.6402855163677,
+    "stability_ari": 0.8330067384985974,
+    "minimum_share": 0.09871342365934191,
+    "eligible": true,
+    "seconds": 2.375,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.18538511462677237,
+        "davies_bouldin": 2.121149303632935,
+        "calinski_harabasz": 201.98235451937617,
+        "minimum_share": 0.09871342365934191,
+        "actual_clusters": 4
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.18007360077467294,
+        "davies_bouldin": 2.189699905977368,
+        "calinski_harabasz": 196.52250873759456,
+        "minimum_share": 0.13742457019241716,
+        "actual_clusters": 4
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.15806860559817748,
+        "davies_bouldin": 2.4503667484277574,
+        "calinski_harabasz": 185.41599329213236,
+        "minimum_share": 0.20448593874530344,
+        "actual_clusters": 4
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 5,
+    "silhouette_mean": 0.18673168539810417,
+    "silhouette_std": 0.008773934501245794,
+    "davies_bouldin": 2.113783366749741,
+    "calinski_harabasz": 182.45304033886953,
+    "stability_ari": 0.7963097456835495,
+    "minimum_share": 0.09803028577934647,
+    "eligible": true,
+    "seconds": 2.609,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.19324571679370262,
+        "davies_bouldin": 2.1439597037890388,
+        "calinski_harabasz": 184.93942584250365,
+        "minimum_share": 0.09859956734600933,
+        "actual_clusters": 5
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.192620621601616,
+        "davies_bouldin": 2.1367374886590182,
+        "calinski_harabasz": 181.103266737052,
+        "minimum_share": 0.09803028577934647,
+        "actual_clusters": 5
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1743287177989939,
+        "davies_bouldin": 2.0606529078011655,
+        "calinski_harabasz": 181.31642843705296,
+        "minimum_share": 0.09859956734600933,
+        "actual_clusters": 5
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 6,
+    "silhouette_mean": 0.19392472728935228,
+    "silhouette_std": 0.0014388280103455077,
+    "davies_bouldin": 2.137064296678632,
+    "calinski_harabasz": 172.45190627459723,
+    "stability_ari": 0.6663378227855827,
+    "minimum_share": 0.09848571103267677,
+    "eligible": true,
+    "seconds": 3.11,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.19575968442076375,
+        "davies_bouldin": 2.2066201635331573,
+        "calinski_harabasz": 169.71478586262467,
+        "minimum_share": 0.12216782420585222,
+        "actual_clusters": 6
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.19376885118519968,
+        "davies_bouldin": 2.200256040680891,
+        "calinski_harabasz": 176.20944640186428,
+        "minimum_share": 0.09859956734600933,
+        "actual_clusters": 6
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.19224564626209337,
+        "davies_bouldin": 2.004316685821846,
+        "calinski_harabasz": 171.43148655930267,
+        "minimum_share": 0.09848571103267677,
+        "actual_clusters": 6
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 7,
+    "silhouette_mean": 0.2102082711922267,
+    "silhouette_std": 0.011725394181024026,
+    "davies_bouldin": 1.9533647224452781,
+    "calinski_harabasz": 167.57678366492618,
+    "stability_ari": 0.6248767783829251,
+    "minimum_share": 0.03882500284640783,
+    "eligible": true,
+    "seconds": 2.64,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.2030738753701003,
+        "davies_bouldin": 2.006346978535294,
+        "calinski_harabasz": 165.95870948680846,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 7
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.22673897943963425,
+        "davies_bouldin": 1.929826101939703,
+        "calinski_harabasz": 171.64505857239354,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 7
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.20081195876694552,
+        "davies_bouldin": 1.923921086860838,
+        "calinski_harabasz": 165.12658293557652,
+        "minimum_share": 0.03882500284640783,
+        "actual_clusters": 7
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 8,
+    "silhouette_mean": 0.21804399845334832,
+    "silhouette_std": 0.003912641824876777,
+    "davies_bouldin": 1.8710559859373312,
+    "calinski_harabasz": 163.17847204446136,
+    "stability_ari": 0.832742111478639,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 2.578,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.2171300070373474,
+        "davies_bouldin": 1.8864887820903662,
+        "calinski_harabasz": 165.49431072513227,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 8
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.22322715685885192,
+        "davies_bouldin": 1.8490352213246464,
+        "calinski_harabasz": 163.22251228914288,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 8
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.21377483146384565,
+        "davies_bouldin": 1.8776439543969812,
+        "calinski_harabasz": 160.8185931191089,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 8
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 9,
+    "silhouette_mean": 0.22664870283711266,
+    "silhouette_std": 0.004401399856319339,
+    "davies_bouldin": 1.8294711469647167,
+    "calinski_harabasz": 158.08442933279537,
+    "stability_ari": 0.5594137399740001,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 3.25,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.22434604474362393,
+        "davies_bouldin": 1.8030524430613752,
+        "calinski_harabasz": 158.98928797066174,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.22279185803292292,
+        "davies_bouldin": 1.8522226428604387,
+        "calinski_harabasz": 155.99628145037354,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.2328082057347911,
+        "davies_bouldin": 1.8331383549723357,
+        "calinski_harabasz": 159.26771857735085,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "kmeans",
+    "k": 10,
+    "silhouette_mean": 0.24080575754813563,
+    "silhouette_std": 0.0034076856053579024,
+    "davies_bouldin": 1.73435304246009,
+    "calinski_harabasz": 160.0650065428291,
+    "stability_ari": 0.661990597885784,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 2.188,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.24469021358771118,
+        "davies_bouldin": 1.7054618752689776,
+        "calinski_harabasz": 161.66948329466834,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.23639336096428204,
+        "davies_bouldin": 1.8053961850456783,
+        "calinski_harabasz": 158.59822868023812,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.24133369809241367,
+        "davies_bouldin": 1.6922010670656138,
+        "calinski_harabasz": 159.9273076535809,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 2,
+    "silhouette_mean": 0.15627757151692223,
+    "silhouette_std": 0.014024208585179688,
+    "davies_bouldin": 2.360117195532362,
+    "calinski_harabasz": 240.61816959934882,
+    "stability_ari": 0.5674133834618577,
+    "minimum_share": 0.30308550609131274,
+    "eligible": true,
+    "seconds": 0.281,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.13644434553421192,
+        "davies_bouldin": 2.5470790861259083,
+        "calinski_harabasz": 224.32397937526116,
+        "minimum_share": 0.4932255493567118,
+        "actual_clusters": 2
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 3,
+    "silhouette_mean": 0.1603240444757277,
+    "silhouette_std": 0.0031718873734661447,
+    "davies_bouldin": 2.3023059900817007,
+    "calinski_harabasz": 198.9672857848473,
+    "stability_ari": 0.6116750685132569,
+    "minimum_share": 0.07184333371285438,
+    "eligible": true,
+    "seconds": 0.297,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.15673121582591762,
+        "davies_bouldin": 2.4281666124417076,
+        "calinski_harabasz": 216.07369457140135,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 3
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.15979452006868847,
+        "davies_bouldin": 2.4240478436785877,
+        "calinski_harabasz": 216.1148061461605,
+        "minimum_share": 0.28555163383809634,
+        "actual_clusters": 3
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1644463975325771,
+        "davies_bouldin": 2.0547035141248062,
+        "calinski_harabasz": 164.71335663698005,
+        "minimum_share": 0.07184333371285438,
+        "actual_clusters": 3
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 4,
+    "silhouette_mean": 0.16827991531487566,
+    "silhouette_std": 0.0076887266423357,
+    "davies_bouldin": 2.185254258732776,
+    "calinski_harabasz": 192.52018908409028,
+    "stability_ari": 0.6887072790205059,
+    "minimum_share": 0.09871342365934191,
+    "eligible": true,
+    "seconds": 0.281,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.164227935863017,
+        "davies_bouldin": 2.238318366635646,
+        "calinski_harabasz": 185.4299546634618,
+        "minimum_share": 0.17465558465216896,
+        "actual_clusters": 4
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.17904437590029357,
+        "davies_bouldin": 2.105074280769801,
+        "calinski_harabasz": 201.55109849038885,
+        "minimum_share": 0.09871342365934191,
+        "actual_clusters": 4
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.16156743418131647,
+        "davies_bouldin": 2.212370128792882,
+        "calinski_harabasz": 190.57951409842022,
+        "minimum_share": 0.15917112603893885,
+        "actual_clusters": 4
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 5,
+    "silhouette_mean": 0.16558742906209648,
+    "silhouette_std": 0.021157967150378026,
+    "davies_bouldin": 2.1920043299852385,
+    "calinski_harabasz": 170.698454904361,
+    "stability_ari": 0.5549016450626629,
+    "minimum_share": 0.09871342365934191,
+    "eligible": true,
+    "seconds": 0.312,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.16612257961813418,
+        "davies_bouldin": 2.1025190540384218,
+        "calinski_harabasz": 169.9314076616379,
+        "minimum_share": 0.13651371968575657,
+        "actual_clusters": 5
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.13941088677810665,
+        "davies_bouldin": 2.2756872848682086,
+        "calinski_harabasz": 162.46531388144132,
+        "minimum_share": 0.1098713423659342,
+        "actual_clusters": 5
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1912288207900486,
+        "davies_bouldin": 2.197806651049086,
+        "calinski_harabasz": 179.69864317000375,
+        "minimum_share": 0.09871342365934191,
+        "actual_clusters": 5
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 6,
+    "silhouette_mean": 0.18659988058289492,
+    "silhouette_std": 0.012485137213461596,
+    "davies_bouldin": 2.09837514116744,
+    "calinski_harabasz": 163.82211654272427,
+    "stability_ari": 0.5390335667139857,
+    "minimum_share": 0.06842764431287715,
+    "eligible": true,
+    "seconds": 0.313,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.19825013406924621,
+        "davies_bouldin": 1.9741976084575048,
+        "calinski_harabasz": 167.0195379277326,
+        "minimum_share": 0.06842764431287715,
+        "actual_clusters": 6
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.16928468542668254,
+        "davies_bouldin": 2.1590080377941803,
+        "calinski_harabasz": 157.6324444756256,
+        "minimum_share": 0.08209040191278606,
+        "actual_clusters": 6
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1922648222527561,
+        "davies_bouldin": 2.1619197772506347,
+        "calinski_harabasz": 166.8143672248146,
+        "minimum_share": 0.06842764431287715,
+        "actual_clusters": 6
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 7,
+    "silhouette_mean": 0.20209097940403953,
+    "silhouette_std": 0.005139818063932886,
+    "davies_bouldin": 2.067552682566078,
+    "calinski_harabasz": 162.2902203045296,
+    "stability_ari": 0.570951079512996,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.359,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.19506579267142066,
+        "davies_bouldin": 2.1208468214207206,
+        "calinski_harabasz": 158.64970398677707,
+        "minimum_share": 0.05089377205966071,
+        "actual_clusters": 7
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.20721963530762066,
+        "davies_bouldin": 1.9714287335479834,
+        "calinski_harabasz": 166.72060225817205,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 7
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.20398751023307726,
+        "davies_bouldin": 2.11038249272953,
+        "calinski_harabasz": 161.5003546686397,
+        "minimum_share": 0.06808607537287943,
+        "actual_clusters": 7
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 8,
+    "silhouette_mean": 0.22416523078826675,
+    "silhouette_std": 0.007325803586041844,
+    "davies_bouldin": 1.9577762104850256,
+    "calinski_harabasz": 156.48505745395812,
+    "stability_ari": 0.6160999095323307,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.328,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.21480625075049314,
+        "davies_bouldin": 1.9842893975523623,
+        "calinski_harabasz": 158.40045852789743,
+        "minimum_share": 0.06489809859956734,
+        "actual_clusters": 8
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.2326928653940047,
+        "davies_bouldin": 1.917403086239001,
+        "calinski_harabasz": 158.6458435462701,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 8
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.2249965762203024,
+        "davies_bouldin": 1.9716361476637134,
+        "calinski_harabasz": 152.4088702877068,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 8
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 9,
+    "silhouette_mean": 0.2167839980669143,
+    "silhouette_std": 0.018156740576356575,
+    "davies_bouldin": 1.8621192089808076,
+    "calinski_harabasz": 154.3268909051654,
+    "stability_ari": 0.5610778392555383,
+    "minimum_share": 0.03893885915974041,
+    "eligible": true,
+    "seconds": 0.329,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.2263546421214061,
+        "davies_bouldin": 1.919514385765627,
+        "calinski_harabasz": 154.56758667476032,
+        "minimum_share": 0.03893885915974041,
+        "actual_clusters": 9
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.19136368338586954,
+        "davies_bouldin": 1.9228063851809827,
+        "calinski_harabasz": 148.8896207022635,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.2326336686934674,
+        "davies_bouldin": 1.7440368559958135,
+        "calinski_harabasz": 159.52346533847245,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "minibatch_kmeans",
+    "k": 10,
+    "silhouette_mean": 0.22514878226390764,
+    "silhouette_std": 0.019116212526243955,
+    "davies_bouldin": 1.8454678811041794,
+    "calinski_harabasz": 144.53920551138222,
+    "stability_ari": 0.493954574001497,
+    "minimum_share": 0.03882500284640783,
+    "eligible": true,
+    "seconds": 0.343,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.23431538675087335,
+        "davies_bouldin": 1.8805712842227513,
+        "calinski_harabasz": 148.84927511473788,
+        "minimum_share": 0.03882500284640783,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.2425910195974123,
+        "davies_bouldin": 1.7812518880428612,
+        "calinski_harabasz": 150.06398428458894,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.19853994044343723,
+        "davies_bouldin": 1.8745804710469258,
+        "calinski_harabasz": 134.70435713481987,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 2,
+    "silhouette_mean": 0.13026007458634206,
+    "silhouette_std": 0.050818505603406526,
+    "davies_bouldin": 2.823212100063515,
+    "calinski_harabasz": 195.80522814218833,
+    "stability_ari": 0.43452623459362005,
+    "minimum_share": 0.30308550609131274,
+    "eligible": true,
+    "seconds": 0.344,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.1661941845082774,
+        "davies_bouldin": 2.266636250235589,
+        "calinski_harabasz": 248.76526471139266,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 2
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.058391854742471445,
+        "davies_bouldin": 3.9363637997193677,
+        "calinski_harabasz": 89.88515500377972,
+        "minimum_share": 0.3954229762040305,
+        "actual_clusters": 2
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 3,
+    "silhouette_mean": 0.14893193399198448,
+    "silhouette_std": 0.008189704693039588,
+    "davies_bouldin": 2.3073949616548517,
+    "calinski_harabasz": 191.90139727913603,
+    "stability_ari": 0.523264425341552,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.469,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.14484584571283507,
+        "davies_bouldin": 2.4429299342691966,
+        "calinski_harabasz": 211.94316574981846,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 3
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.14158962750571466,
+        "davies_bouldin": 2.6234557978735498,
+        "calinski_harabasz": 198.14360956265605,
+        "minimum_share": 0.30308550609131274,
+        "actual_clusters": 3
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.16036032875740372,
+        "davies_bouldin": 1.8557991528218085,
+        "calinski_harabasz": 165.61741652493353,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 3
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 4,
+    "silhouette_mean": 0.14491423516653193,
+    "silhouette_std": 0.014861122339520253,
+    "davies_bouldin": 2.351180492268517,
+    "calinski_harabasz": 168.9187613993771,
+    "stability_ari": 0.42585531402517746,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.594,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.14339753199042626,
+        "davies_bouldin": 2.4514306747599894,
+        "calinski_harabasz": 175.71297694145264,
+        "minimum_share": 0.1483547762723443,
+        "actual_clusters": 4
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.12751896054955414,
+        "davies_bouldin": 2.4271170928525168,
+        "calinski_harabasz": 165.61010890233496,
+        "minimum_share": 0.21131731754525787,
+        "actual_clusters": 4
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1638262129596154,
+        "davies_bouldin": 2.1749937091930445,
+        "calinski_harabasz": 165.43319835434374,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 4
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 5,
+    "silhouette_mean": 0.12046783552761768,
+    "silhouette_std": 0.011892180122256898,
+    "davies_bouldin": 2.7807345072229257,
+    "calinski_harabasz": 139.5540476177994,
+    "stability_ari": 0.4441780062746983,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.64,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.10403666195687675,
+        "davies_bouldin": 3.483502311402462,
+        "calinski_harabasz": 130.38217780506932,
+        "minimum_share": 0.14425594899237162,
+        "actual_clusters": 5
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.12557724726858996,
+        "davies_bouldin": 2.3818028640949205,
+        "calinski_harabasz": 148.26009775105553,
+        "minimum_share": 0.08117955140612547,
+        "actual_clusters": 5
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.1317895973573863,
+        "davies_bouldin": 2.4768983461713936,
+        "calinski_harabasz": 140.01986729727335,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 5
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 6,
+    "silhouette_mean": 0.1147796871035797,
+    "silhouette_std": 0.013571564795886686,
+    "davies_bouldin": 2.9164686473662464,
+    "calinski_harabasz": 131.2430676789464,
+    "stability_ari": 0.39051235099146964,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.688,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.09737046718032304,
+        "davies_bouldin": 3.7580935160031,
+        "calinski_harabasz": 127.89333729029468,
+        "minimum_share": 0.10884663554594103,
+        "actual_clusters": 6
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.1164864150455403,
+        "davies_bouldin": 2.507969128287962,
+        "calinski_harabasz": 130.0701880825536,
+        "minimum_share": 0.07992713195946716,
+        "actual_clusters": 6
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.13048217908487575,
+        "davies_bouldin": 2.483343297807677,
+        "calinski_harabasz": 135.76567766399097,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 6
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 7,
+    "silhouette_mean": 0.10580784535739622,
+    "silhouette_std": 0.017893366862130847,
+    "davies_bouldin": 2.7946069608440633,
+    "calinski_harabasz": 115.43133656539766,
+    "stability_ari": 0.3068613612420419,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.89,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.08693785146459068,
+        "davies_bouldin": 2.9331514185123058,
+        "calinski_harabasz": 109.21110706146659,
+        "minimum_share": 0.079699419332802,
+        "actual_clusters": 7
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.12984425882269587,
+        "davies_bouldin": 2.444638698496159,
+        "calinski_harabasz": 123.69549351408685,
+        "minimum_share": 0.07981327564613458,
+        "actual_clusters": 7
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.10064142578490212,
+        "davies_bouldin": 3.0060307655237257,
+        "calinski_harabasz": 113.38740912063953,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 7
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 8,
+    "silhouette_mean": 0.12548160941294106,
+    "silhouette_std": 0.00763881865059638,
+    "davies_bouldin": 2.888109801719539,
+    "calinski_harabasz": 114.02107361694335,
+    "stability_ari": 0.47770325043572287,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.688,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.11861415828755348,
+        "davies_bouldin": 3.0165544264000452,
+        "calinski_harabasz": 117.45846880708278,
+        "minimum_share": 0.07252647159284982,
+        "actual_clusters": 8
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.13613723997676566,
+        "davies_bouldin": 2.651714388386417,
+        "calinski_harabasz": 116.56329421354089,
+        "minimum_share": 0.05305704201297962,
+        "actual_clusters": 8
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.12169342997450402,
+        "davies_bouldin": 2.9960605903721547,
+        "calinski_harabasz": 108.0414578302064,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 8
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 9,
+    "silhouette_mean": 0.1187234801419962,
+    "silhouette_std": 0.010166100420261922,
+    "davies_bouldin": 2.8246549794398828,
+    "calinski_harabasz": 107.26046729713403,
+    "stability_ari": 0.5393806797791644,
+    "minimum_share": 0.039052715473072985,
+    "eligible": true,
+    "seconds": 0.859,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.10816788320688288,
+        "davies_bouldin": 2.804366077805787,
+        "calinski_harabasz": 107.43126866410238,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.11554794041450565,
+        "davies_bouldin": 2.738696141957972,
+        "calinski_harabasz": 105.58663508941399,
+        "minimum_share": 0.052943185699647045,
+        "actual_clusters": 9
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.13245461680460008,
+        "davies_bouldin": 2.930902718555889,
+        "calinski_harabasz": 108.76349813788576,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 9
+      }
+    ],
+    "diagnostics": []
+  },
+  {
+    "algorithm": "gaussian_mixture",
+    "k": 10,
+    "silhouette_mean": 0.11496659693676241,
+    "silhouette_std": 0.02901485464317127,
+    "davies_bouldin": 2.8198228049152703,
+    "calinski_harabasz": 96.65607807177992,
+    "stability_ari": 0.48171829640328134,
+    "minimum_share": 0.02197426847318684,
+    "eligible": true,
+    "seconds": 0.922,
+    "seed_scores": [
+      {
+        "seed": 42,
+        "silhouette": 0.07651734766700383,
+        "davies_bouldin": 2.9770114828235936,
+        "calinski_harabasz": 83.7654524985583,
+        "minimum_share": 0.02197426847318684,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 43,
+        "silhouette": 0.1217801737556628,
+        "davies_bouldin": 2.6577926877080555,
+        "calinski_harabasz": 97.52257196014538,
+        "minimum_share": 0.05237390413298417,
+        "actual_clusters": 10
+      },
+      {
+        "seed": 44,
+        "silhouette": 0.14660226938762055,
+        "davies_bouldin": 2.824664244214162,
+        "calinski_harabasz": 108.68020975663605,
+        "minimum_share": 0.039052715473072985,
+        "actual_clusters": 10
+      }
+    ],
+    "diagnostics": []
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "raw_rows": 8790,
+  "catalog_rows": 8783,
+  "removed_rows": 7,
+  "duplicate_mapping": [
+    {
+      "removed_id": "s5965",
+      "retained_id": "s3997"
+    },
+    {
+      "removed_id": "s5966",
+      "retained_id": "s4523"
+    },
+    {
+      "removed_id": "s5967",
+      "retained_id": "s3963"
+    },
+    {
+      "removed_id": "s6530",
+      "retained_id": "s3372"
+    },
+    {
+      "removed_id": "s6706",
+      "retained_id": "s304"
+    },
+    {
+      "removed_id": "s7346",
+      "retained_id": "s160"
+    },
+    {
+      "removed_id": "s8023",
+      "retained_id": "s1271"
+    }
+  ],
+  "source_sha256": "90b02beeb554921f81d3b9a774d0f7766f6a65240162565f6b4082165dc2a1d3",
+  "catalog_sha256": "d8405641210ec38b0e208b4704062e9570930508741aa5d3f40ced7310cad69a",
+  "policy": "Retain first source row per normalized title/type/year; rating is excluded from deduplication and fitting"
+}

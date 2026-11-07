@@ -1,0 +1,918 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Content Segmentation",
+    "version": "2.0.0"
+  },
+  "paths": {
+    "/api/v1/dataset": {
+      "get": {
+        "tags": [
+          "Dataset"
+        ],
+        "summary": "Dataset",
+        "operationId": "dataset_api_v1_dataset_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatasetInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tasks/4/results": {
+      "get": {
+        "tags": [
+          "Segmentation"
+        ],
+        "summary": "Results",
+        "operationId": "results_api_v1_tasks_4_results_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentationResults"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tasks/4/titles": {
+      "get": {
+        "tags": [
+          "Segmentation"
+        ],
+        "summary": "Titles",
+        "operationId": "titles_api_v1_tasks_4_titles_get",
+        "parameters": [
+          {
+            "name": "cluster",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Cluster"
+            }
+          },
+          {
+            "name": "content_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "Movie",
+                    "TV Show"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Content Type"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 200,
+              "default": "",
+              "title": "Q"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 25,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitlePage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tasks": {
+      "get": {
+        "summary": "Tasks",
+        "operationId": "tasks_api_v1_tasks_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CatalogTitle": {
+        "properties": {
+          "show_id": {
+            "type": "string",
+            "title": "Show Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "release_year": {
+            "type": "integer",
+            "title": "Release Year"
+          },
+          "duration": {
+            "type": "string",
+            "title": "Duration"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "listed_in": {
+            "type": "string",
+            "title": "Listed In"
+          },
+          "cluster": {
+            "type": "integer",
+            "title": "Cluster"
+          }
+        },
+        "type": "object",
+        "required": [
+          "show_id",
+          "title",
+          "type",
+          "release_year",
+          "duration",
+          "country",
+          "listed_in",
+          "cluster"
+        ],
+        "title": "CatalogTitle"
+      },
+      "ClusterProfile": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "size": {
+            "type": "integer",
+            "title": "Size"
+          },
+          "share": {
+            "type": "number",
+            "title": "Share"
+          },
+          "movie_count": {
+            "type": "integer",
+            "title": "Movie Count"
+          },
+          "tv_count": {
+            "type": "integer",
+            "title": "Tv Count"
+          },
+          "median_year": {
+            "type": "number",
+            "title": "Median Year"
+          },
+          "genres": {
+            "items": {
+              "$ref": "#/components/schemas/Frequency"
+            },
+            "type": "array",
+            "title": "Genres"
+          },
+          "countries": {
+            "items": {
+              "$ref": "#/components/schemas/Frequency"
+            },
+            "type": "array",
+            "title": "Countries"
+          },
+          "median_movie_minutes": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Median Movie Minutes"
+          },
+          "median_tv_seasons": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Median Tv Seasons"
+          },
+          "representatives": {
+            "items": {
+              "$ref": "#/components/schemas/Representative"
+            },
+            "type": "array",
+            "title": "Representatives"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "size",
+          "share",
+          "movie_count",
+          "tv_count",
+          "median_year",
+          "genres",
+          "countries",
+          "median_movie_minutes",
+          "median_tv_seasons",
+          "representatives"
+        ],
+        "title": "ClusterProfile"
+      },
+      "ClusteringCandidate": {
+        "properties": {
+          "algorithm": {
+            "type": "string",
+            "title": "Algorithm"
+          },
+          "k": {
+            "type": "integer",
+            "title": "K"
+          },
+          "silhouette_mean": {
+            "type": "number",
+            "title": "Silhouette Mean"
+          },
+          "silhouette_std": {
+            "type": "number",
+            "title": "Silhouette Std"
+          },
+          "davies_bouldin": {
+            "type": "number",
+            "title": "Davies Bouldin"
+          },
+          "calinski_harabasz": {
+            "type": "number",
+            "title": "Calinski Harabasz"
+          },
+          "stability_ari": {
+            "type": "number",
+            "title": "Stability Ari"
+          },
+          "minimum_share": {
+            "type": "number",
+            "title": "Minimum Share"
+          },
+          "eligible": {
+            "type": "boolean",
+            "title": "Eligible"
+          },
+          "seconds": {
+            "type": "number",
+            "title": "Seconds"
+          },
+          "seed_scores": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Seed Scores"
+          },
+          "diagnostics": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Diagnostics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "algorithm",
+          "k",
+          "silhouette_mean",
+          "silhouette_std",
+          "davies_bouldin",
+          "calinski_harabasz",
+          "stability_ari",
+          "minimum_share",
+          "eligible",
+          "seconds",
+          "seed_scores",
+          "diagnostics"
+        ],
+        "title": "ClusteringCandidate"
+      },
+      "DatasetInfo": {
+        "properties": {
+          "task_id": {
+            "type": "integer",
+            "title": "Task Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "source_file": {
+            "type": "string",
+            "title": "Source File"
+          },
+          "source_sha256": {
+            "type": "string",
+            "title": "Source Sha256"
+          },
+          "snapshot_date": {
+            "type": "string",
+            "title": "Snapshot Date"
+          },
+          "raw_rows": {
+            "type": "integer",
+            "title": "Raw Rows"
+          },
+          "variables": {
+            "items": {
+              "$ref": "#/components/schemas/Variable"
+            },
+            "type": "array",
+            "title": "Variables"
+          },
+          "decisions": {
+            "items": {
+              "$ref": "#/components/schemas/Decision"
+            },
+            "type": "array",
+            "title": "Decisions"
+          },
+          "stages": {
+            "items": {
+              "$ref": "#/components/schemas/Stage"
+            },
+            "type": "array",
+            "title": "Stages"
+          },
+          "partitions": {
+            "items": {
+              "$ref": "#/components/schemas/Partition"
+            },
+            "type": "array",
+            "title": "Partitions"
+          },
+          "split_strategy": {
+            "type": "string",
+            "title": "Split Strategy"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          }
+        },
+        "type": "object",
+        "required": [
+          "task_id",
+          "title",
+          "run_id",
+          "source_file",
+          "source_sha256",
+          "snapshot_date",
+          "raw_rows",
+          "variables",
+          "decisions",
+          "stages",
+          "partitions",
+          "split_strategy",
+          "limitations"
+        ],
+        "title": "DatasetInfo"
+      },
+      "Decision": {
+        "properties": {
+          "action": {
+            "type": "string",
+            "title": "Action"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "evidence": {
+            "type": "string",
+            "title": "Evidence"
+          },
+          "limitation": {
+            "type": "string",
+            "title": "Limitation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "action",
+          "reason",
+          "evidence",
+          "limitation"
+        ],
+        "title": "Decision"
+      },
+      "Frequency": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "count": {
+            "type": "integer",
+            "title": "Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "count"
+        ],
+        "title": "Frequency"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Partition": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "rows": {
+            "type": "integer",
+            "title": "Rows"
+          },
+          "purpose": {
+            "type": "string",
+            "title": "Purpose"
+          },
+          "segments": {
+            "items": {
+              "$ref": "#/components/schemas/Segment"
+            },
+            "type": "array",
+            "title": "Segments"
+          },
+          "metrics": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Metrics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "rows",
+          "purpose",
+          "segments",
+          "metrics"
+        ],
+        "title": "Partition"
+      },
+      "ProjectionPoint": {
+        "properties": {
+          "show_id": {
+            "type": "string",
+            "title": "Show Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "cluster": {
+            "type": "integer",
+            "title": "Cluster"
+          },
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          }
+        },
+        "type": "object",
+        "required": [
+          "show_id",
+          "title",
+          "type",
+          "cluster",
+          "x",
+          "y"
+        ],
+        "title": "ProjectionPoint"
+      },
+      "Representative": {
+        "properties": {
+          "show_id": {
+            "type": "string",
+            "title": "Show Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "release_year": {
+            "type": "integer",
+            "title": "Release Year"
+          },
+          "duration": {
+            "type": "string",
+            "title": "Duration"
+          }
+        },
+        "type": "object",
+        "required": [
+          "show_id",
+          "title",
+          "type",
+          "release_year",
+          "duration"
+        ],
+        "title": "Representative"
+      },
+      "Segment": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "rows": {
+            "type": "integer",
+            "title": "Rows"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "rows"
+        ],
+        "title": "Segment"
+      },
+      "SegmentationResults": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "algorithm": {
+            "type": "string",
+            "title": "Algorithm"
+          },
+          "k": {
+            "type": "integer",
+            "title": "K"
+          },
+          "catalog_rows": {
+            "type": "integer",
+            "title": "Catalog Rows"
+          },
+          "raw_rows": {
+            "type": "integer",
+            "title": "Raw Rows"
+          },
+          "removed_rows": {
+            "type": "integer",
+            "title": "Removed Rows"
+          },
+          "sample_size": {
+            "type": "integer",
+            "title": "Sample Size"
+          },
+          "feature_count": {
+            "type": "integer",
+            "title": "Feature Count"
+          },
+          "selected": {
+            "$ref": "#/components/schemas/ClusteringCandidate"
+          },
+          "experiments": {
+            "items": {
+              "$ref": "#/components/schemas/ClusteringCandidate"
+            },
+            "type": "array",
+            "title": "Experiments"
+          },
+          "profiles": {
+            "items": {
+              "$ref": "#/components/schemas/ClusterProfile"
+            },
+            "type": "array",
+            "title": "Profiles"
+          },
+          "projection": {
+            "items": {
+              "$ref": "#/components/schemas/ProjectionPoint"
+            },
+            "type": "array",
+            "title": "Projection"
+          },
+          "projection_variance": {
+            "type": "number",
+            "title": "Projection Variance"
+          },
+          "feature_weights": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Feature Weights"
+          },
+          "seed": {
+            "type": "integer",
+            "title": "Seed"
+          },
+          "scope": {
+            "type": "string",
+            "title": "Scope"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "algorithm",
+          "k",
+          "catalog_rows",
+          "raw_rows",
+          "removed_rows",
+          "sample_size",
+          "feature_count",
+          "selected",
+          "experiments",
+          "profiles",
+          "projection",
+          "projection_variance",
+          "feature_weights",
+          "seed",
+          "scope"
+        ],
+        "title": "SegmentationResults"
+      },
+      "Stage": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "input_rows": {
+            "type": "integer",
+            "title": "Input Rows"
+          },
+          "output_rows": {
+            "type": "integer",
+            "title": "Output Rows"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "input_rows",
+          "output_rows",
+          "reason"
+        ],
+        "title": "Stage"
+      },
+      "TitlePage": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogTitle"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "total",
+          "offset",
+          "limit",
+          "items"
+        ],
+        "title": "TitlePage"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Variable": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "treatment": {
+            "type": "string",
+            "title": "Treatment"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "role",
+          "reason",
+          "treatment"
+        ],
+        "title": "Variable"
+      }
+    }
+  }
+}

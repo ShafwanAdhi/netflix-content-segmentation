@@ -1,0 +1,11 @@
+{
+  "source_sha256": "90b02beeb554921f81d3b9a774d0f7766f6a65240162565f6b4082165dc2a1d3",
+  "cluster_counts": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "seeds": [42, 43, 44],
+  "silhouette_sample": 1500,
+  "projection_sample": 2500,
+  "minimum_cluster_share": 0.01,
+  "weights": {"type": 0.35, "genre": 1.0, "country": 0.35, "year": 0.25, "duration": 0.25},
+  "selection": "highest mean sampled silhouette among converged nondegenerate candidates; ties: lower Davies-Bouldin, lower k, K-Means before MiniBatch before Gaussian Mixture",
+  "final_seed": 42
+}
