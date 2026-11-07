@@ -321,7 +321,7 @@ export function ClusterExplorer() {
             ))}
           </div>
         </section>
-        <aside className="cluster-profile">
+        <aside className="cluster-profile" data-motion-revision={cluster}>
           {profile ? (
             <>
               <p className="eyebrow">
