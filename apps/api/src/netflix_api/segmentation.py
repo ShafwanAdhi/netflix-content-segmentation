@@ -99,7 +99,7 @@ def service(request):
     if value is None:
         raise HTTPException(
             503,
-            detail="Validated Task 4 segmentation artifacts are unavailable. Run train_segmentation.py first.",
+            detail="Validated segmentation artifacts are unavailable. Run train_segmentation.py first.",
         )
     return value
 

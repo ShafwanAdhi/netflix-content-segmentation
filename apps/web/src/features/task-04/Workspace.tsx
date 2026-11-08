@@ -125,7 +125,7 @@ export function SegmentationOverview() {
   return (
     <>
       <PageHeading
-        eyebrow="TASK 04 / UNSUPERVISED LEARNING"
+        eyebrow="UNSUPERVISED LEARNING"
         title="Find structure in the catalog."
         action={
           <Link className="button" to="/explore">
@@ -239,7 +239,7 @@ export function ClusterExplorer() {
   return (
     <>
       <PageHeading
-        eyebrow="TASK 04 / CLUSTER EXPLORER"
+        eyebrow="CLUSTER EXPLORER"
         title="Inspect the groups, title by title."
       >
         Use catalog profiles and representative titles to interpret each group.
@@ -517,7 +517,7 @@ export function SegmentationEvaluation() {
   return (
     <>
       <PageHeading
-        eyebrow="TASK 04 / INTERNAL VALIDATION"
+        eyebrow="INTERNAL VALIDATION"
         title="Compare structure, not classification accuracy."
       >
         Three algorithms, nine cluster counts, three seeds. Every candidate uses
@@ -660,7 +660,7 @@ export function SegmentationMethodology() {
   return (
     <>
       <PageHeading
-        eyebrow="TASK 04 / EXPERIMENT DESIGN"
+        eyebrow="EXPERIMENT DESIGN"
         title="Define similarity before discovering groups."
       >
         The representation determines what “similar” means. Every modeling and
@@ -684,7 +684,7 @@ export function SegmentationMethodology() {
             {[
               [
                 "Prepare entities",
-                "Verify the same supplied CSV and retain the first row per normalized title/type/year. Seven repeated rows are removed; Task 3 artifacts remain independent.",
+                "Verify the same supplied CSV and retain the first row per normalized title/type/year. Seven repeated rows are removed; Audience rating model artifacts remain independent.",
               ],
               [
                 "Encode and scale",
