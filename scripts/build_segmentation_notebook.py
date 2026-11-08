@@ -1,4 +1,4 @@
-"""Execute a descriptive Task 4 notebook using the immutable model results."""
+"""Execute a descriptive clustering notebook using the immutable model results."""
 
 import contextlib
 import io
@@ -36,7 +36,7 @@ print(comparison[['algorithm','k','silhouette_mean','davies_bouldin','stability_
 """,
 ]
 cells = [
-    nbformat.v4.new_markdown_cell("""# Task 4 — Content segmentation
+    nbformat.v4.new_markdown_cell("""# Content segmentation
 
 Executed analysis of the supplied historical catalog. Feature preparation, model fitting and selection are implemented in the task-owned Python package. This notebook reads its frozen outputs; it does not retune the model or use ratings as clustering labels.
 
@@ -77,4 +77,4 @@ notebook = nbformat.v4.new_notebook(
 destination = base / "notebooks/task-04/01_segmentation.ipynb"
 destination.parent.mkdir(parents=True, exist_ok=True)
 nbformat.write(notebook, destination)
-print(f"Task 4 analysis notebook: {destination}")
+print(f"Clustering analysis notebook: {destination}")

@@ -1,0 +1,18 @@
+{
+  "repository": "netflix-content-segmentation",
+  "commit": "5b433ece6f2e3a94925fc595e655719b25136b3d",
+  "runs": [
+    {
+      "name": "Verify standalone task",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ShafwanAdhi/netflix-content-segmentation/actions/runs/42465032538"
+    },
+    {
+      "name": "Container verification",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ShafwanAdhi/netflix-content-segmentation/actions/runs/42465032707"
+    }
+  ]
+}

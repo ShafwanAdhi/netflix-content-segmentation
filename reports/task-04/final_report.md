@@ -1,4 +1,4 @@
-# Task 4 — Content segmentation results
+# Content segmentation results
 
 Run `20261106T115043590368Z`. **kmeans**, **k=10**, selected by mean silhouette across three seeds.
 

@@ -310,7 +310,7 @@ def render_reports(result):
     fig.tight_layout()
     fig.savefig(figures / "model_comparison.png", dpi=150)
     plt.close(fig)
-    text = f"# Task 4 — Content segmentation results\n\nRun `{result['run_id']}`. **{result['algorithm']}**, **k={result['k']}**, selected by mean silhouette across three seeds.\n\n"
+    text = f"# Content segmentation results\n\nRun `{result['run_id']}`. **{result['algorithm']}**, **k={result['k']}**, selected by mean silhouette across three seeds.\n\n"
     text += f"{result['catalog_rows']:,} unique title/type/year entities from {result['raw_rows']:,} raw rows; {result['removed_rows']} repeated entity rows removed. {result['feature_count']} weighted feature dimensions. Ratings, title, ID, director and date-added are excluded from fitting.\n\n"
     text += f"Internal scores use a fixed random sample of {result['sample_size']} titles in the full weighted feature space. PCA is visualization only; its two components explain {result['projection_variance']:.1%} of feature variance.\n\n"
     text += "## Candidate comparison\n\n| Algorithm | k | Silhouette mean | Std | Davies-Bouldin ↓ | Calinski-Harabasz ↑ | Seed ARI ↑ | Eligible |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n"
