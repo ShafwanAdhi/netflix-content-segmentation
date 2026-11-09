@@ -1,0 +1,16 @@
+
+> netflix-content-segmentation@ test D:\auspify-intern\standalone\netflix-content-segmentation
+> pnpm --filter @lab/web test
+
+
+> @lab/web@0.1.0 test D:\auspify-intern\standalone\netflix-content-segmentation\apps\web
+> vitest run
+
+
+ RUN  v4.1.12 D:/auspify-intern/standalone/netflix-content-segmentation/apps/web
+
+
+ Test Files  2 passed (2)
+      Tests  4 passed (4)
+   Start at  12:36:59
+   Duration  4.15s (transform 261ms, setup 1.20s, import 1.28s, tests 593ms, environment 3.30s)

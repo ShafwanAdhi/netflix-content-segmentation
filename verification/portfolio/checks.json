@@ -1,0 +1,65 @@
+{
+  "run_id": "20261106T115043590368Z",
+  "pytest_passed": 10,
+  "frontend_tests_passed": 4,
+  "browser_checks_passed": 75,
+  "browser_errors": [],
+  "production_build": "passed",
+  "initial_html_routes_verified": 5,
+  "viewport_widths": [
+    390,
+    768,
+    1440
+  ],
+  "immutable_files_verified": 10,
+  "commands": [
+    {
+      "name": "ruff",
+      "exit_code": 0,
+      "command": "uv run ruff check ."
+    },
+    {
+      "name": "pytest",
+      "exit_code": 0,
+      "command": "uv run pytest -q"
+    },
+    {
+      "name": "readme",
+      "exit_code": 0,
+      "command": "uv run python scripts/refresh_readme.py --check"
+    },
+    {
+      "name": "application",
+      "exit_code": 0,
+      "command": "uv run python scripts/verify_project.py"
+    },
+    {
+      "name": "container-preflight",
+      "exit_code": 0,
+      "command": "uv run python deploy/validate_bundle.py"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "command": "git -c core.safecrlf=false diff --check"
+    },
+    {
+      "name": "frontend",
+      "command": "corepack pnpm test",
+      "exit_code": 0
+    },
+    {
+      "name": "build",
+      "command": "corepack pnpm build",
+      "exit_code": 0
+    }
+  ],
+  "docker_build": "unverified: Docker Desktop engine API HTTP 500",
+  "container_smoke": "unverified",
+  "deployment": "not performed",
+  "screenshots": {
+    "overview-desktop.png": "4041587cf015d7392aa6107290c1576237cad4bcc49212ce3e6d5e81c0c73283",
+    "overview-mobile.png": "6e405e7c63776e30e59f056171115c736901df8196e39f546e23f3155b8c6558",
+    "overview-tablet.png": "ac42558536f3bed75903f589a1f2ce25e51d742ac94e5b11c6f23a61b8d3adca"
+  }
+}

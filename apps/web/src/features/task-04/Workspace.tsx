@@ -1,3 +1,4 @@
+import { CaseStudy, useRunEvidence } from "../../components/CaseStudy";
 import { useState, type CSSProperties } from "react";
 import { clusterColor as color } from "../../lib/dataColors";
 import { Link, useSearchParams } from "react-router";
@@ -121,7 +122,10 @@ function ClusterMap({
 }
 export function SegmentationOverview() {
   const { data, error, isPending } = useSegmentation();
-  if (!data) return <State error={error} loading={isPending} />;
+  const evidence = useRunEvidence(data?.run_id);
+  if (error || evidence.error) return <State error={error || evidence.error} />;
+  if (!data || evidence.pending)
+    return <State loading={isPending || evidence.pending} />;
   return (
     <>
       <PageHeading
@@ -136,6 +140,59 @@ export function SegmentationOverview() {
         Group titles by genre, origin, type and release attributes. Inspect the
         similarities without assuming an audience or popularity score.
       </PageHeading>
+      <CaseStudy
+        question="Which catalog titles share interpretable metadata profiles?"
+        finding={
+          <>
+            {modelName(data.algorithm)} grouped{" "}
+            {data.catalog_rows.toLocaleString()} titles into{" "}
+            <strong>{data.k} clusters</strong>. Mean silhouette was{" "}
+            <strong>{data.selected.silhouette_mean.toFixed(3)}</strong>;
+            same-catalog seed ARI was {data.selected.stability_ari.toFixed(3)}.
+            These describe internal structure and initialization stability, not
+            audience validation.
+          </>
+        }
+        decision={
+          <>
+            Compare algorithms in a shared feature space with group-size
+            constraints. The selected k={data.k} is best among tested counts,
+            not a global optimum. Genre and type strongly influence the
+            geometry.
+          </>
+        }
+        limitation={
+          <>
+            The two-dimensional map explains{" "}
+            {(data.projection_variance * 100).toFixed(1)}% of feature variance.
+            Segments describe content metadata, not viewer personas or
+            recommendation quality.
+          </>
+        }
+        coverage="Entity cleaning, multi-label representation, weighted features, algorithm and cluster-count comparison, seed diagnostics, representative titles and a searchable explorer."
+        action="Explore the groups"
+        href="/explore"
+        run={data.run_id}
+      >
+        <div className="case-profile-list">
+          {data.profiles
+            .filter((profile) => [0, 7].includes(profile.id))
+            .map((profile) => (
+              <article key={profile.id}>
+                <h3>
+                  Cluster {profile.id} · {profile.name}
+                </h3>
+                <p>
+                  {profile.size.toLocaleString()} titles;{" "}
+                  {profile.movie_count.toLocaleString()} Movies /{" "}
+                  {profile.tv_count.toLocaleString()} TV Shows. Representative
+                  title: {profile.representatives[0]?.title}. Source taxonomy
+                  contributes to these similarities.
+                </p>
+              </article>
+            ))}
+        </div>
+      </CaseStudy>
       <div className="summary-strip">
         <div>
           <span>UNIQUE CONTENT ENTITIES</span>

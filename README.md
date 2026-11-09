@@ -1,19 +1,39 @@
 # Netflix Content Segmentation
 
-Machine learning application for catalog clustering. Includes a React frontend, FastAPI backend, ML package and selected immutable artifact bundle.
+Which titles share interpretable catalog metadata? This project compares clustering approaches and connects internal diagnostics to representative titles and searchable group profiles. Intended for content exploration, not audience segmentation.
 
-## Status
+[Open live application](https://netflix-content-segmentation.shafwan.digital)
 
-- Implemented: project workspace, About Dataset, audited variable rationale, actual preparation/split/segment outcomes, model evaluation and interactive results.
-- Interface: responsive RawBlock layout with self-hosted fonts and semantic chart colors and labelled legends; see [verification and screenshots](docs/VERIFICATION.md).
-- Repository: independent application, model artifacts and verification workflow.
-- Active model run: `20261106T115043590368Z`. See `artifacts/task-04/active.json` for the current run.
+![Netflix Content Segmentation overview showing the project question, frozen result and interpretation limits](verification/portfolio/overview-desktop.png)
 
-- Motion: staged page/scroll reveals, chart and result transitions, hover/press feedback, and live reduced-motion support.
+## Measured results
 
-## Live application
+<!-- RESULTS:START -->
+Evidence run: `20261106T115043590368Z`. Generated from the active artifact; not a business-impact claim.
 
-[Open application](https://netflix-content-segmentation.shafwan.digital) - deployed with Docker, Nginx and HTTPS. [Production verification](verification/release.json).
+**kmeans / k=10**, 8,783 entities. Mean silhouette **0.241**; same-catalog seed ARI **0.662**.
+
+Selected among the recorded algorithm/count candidates using shared features and eligibility constraints. These are in-sample internal diagnostics, not held-out classification accuracy. PCA explains 25.9% of variance; no viewer personas or recommendation outcomes are verified.
+<!-- RESULTS:END -->
+
+## Decisions and implementation
+
+Define similarity with explicit feature weights and compare candidates in the same representation. Group-size constraints and seed diagnostics complement silhouette; source genre taxonomy remains a major influence.
+
+The implementation covers data audit and preparation, model comparison, saved evaluation artifacts, a FastAPI service, a React workspace, validation and Docker packaging. This describes repository capabilities; no business adoption or measured commercial impact is claimed.
+
+```mermaid
+flowchart LR
+    A[Supplied CSV and provenance] --> B[Preparation and validation]
+    B --> C[Training and model selection]
+    C --> D[Frozen artifact and evaluation]
+    D --> E[FastAPI]
+    E --> F[React website]
+```
+
+## Reproduction boundary
+
+**Artifact inference:** the included validated bundle supports the website without the raw CSV. **Training reproduction:** requires the original supplied CSV matching [the provenance record](data/provenance.json). The exact upstream source and redistribution permission remain unverified; no public substitute is asserted to reproduce this training input. The observed maximum date added is not a known acquisition date.
 
 ## Quickstart
 
@@ -36,13 +56,13 @@ uv run python scripts/train_segmentation.py
 uv run python scripts/refresh_dataset.py
 corepack pnpm types
 uv run ruff check .
-uv run pytest
 corepack pnpm test
 corepack pnpm build
+uv run pytest
 corepack pnpm verify
 ```
 
-Training creates a new immutable run; regenerate the dataset profile whenever activating another run. The API refuses a stale profile. No performance values are invented by the frontend.
+Training creates a new immutable run; regenerate the dataset profile whenever activating another run. The API refuses a stale profile. No performance values are invented by the frontend. Run `uv run python scripts/refresh_readme.py` to update only the marked results above, or append `--check` to verify them. Source/provenance and run mismatches fail the command.
 
 ## Structure and documentation
 
